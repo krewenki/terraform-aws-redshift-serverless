@@ -25,7 +25,7 @@ resource "aws_redshiftserverless_namespace" "this" {
   admin_user_password  = local.master_password
   admin_user           = var.master_username
   db_name              = var.database_name
-  default_iam_role_arn = null
+  default_iam_role_arn = var.default_iam_role_arn
   iam_roles            = null
   kms_key_id           = null
   log_exports          = null
