@@ -1,4 +1,3 @@
-data "aws_partition" "current" {}
 
 resource "random_password" "master_password" {
   count = var.create && var.create_random_password ? 1 : 0
