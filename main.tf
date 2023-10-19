@@ -39,7 +39,7 @@ resource "aws_redshiftserverless_workgroup" "this" {
 
   base_capacity        = null
   enhanced_vpc_routing = var.enhanced_vpc_routing
-  publicly_accessible  = null
+  publicly_accessible  = var.publicly_accessible
   security_group_ids   = null
   subnet_ids           = var.subnet_ids
   tags                 = merge(var.tags, try(each.value.tags, {}))
