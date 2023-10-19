@@ -35,7 +35,7 @@ resource "aws_redshiftserverless_namespace" "this" {
   tags                 = merge(var.tags, try(each.value.tags, {}))
 }
 
-resource "aws_redshiftserverless_workgroup" "example" {
+resource "aws_redshiftserverless_workgroup" "this" {
   count          = var.create ? 1 : 0
   namespace_name = aws_redshiftserverless_namespace.this[0].namespace_name
   workgroup_name = aws_redshiftserverless_namespace.this[0].namespace_name
