@@ -21,7 +21,7 @@ locals {
 
 resource "aws_redshiftserverless_namespace" "this" {
   count                = var.create ? 1 : 0
-  namespace_name       = "concurrency-scaling"
+  namespace_name       = var.namespace_name
   admin_user_password  = local.master_password
   admin_user           = var.master_username
   db_name              = var.database_name

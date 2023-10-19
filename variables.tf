@@ -14,6 +14,12 @@ variable "tags" {
 # Cluster
 ################################################################################
 
+variable "namespace_name" {
+  description = "(Required) The name of the namespace"
+  type        = string
+  default     = null
+}
+
 variable "allow_version_upgrade" {
   description = "If `true`, major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is `true`"
   type        = bool
