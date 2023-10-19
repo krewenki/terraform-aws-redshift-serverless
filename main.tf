@@ -26,9 +26,9 @@ resource "aws_redshiftserverless_namespace" "this" {
   admin_user           = var.master_username
   db_name              = var.database_name
   default_iam_role_arn = var.default_iam_role_arn
-	iam_roles            = var.iam_role_arns
+  iam_roles            = var.iam_role_arns
   kms_key_id           = var.kms_key_arn
-  log_exports          = null
+  log_exports          = var.log_exports
   tags                 = merge(var.tags, try(each.value.tags, {}))
 }
 

@@ -111,6 +111,12 @@ variable "kms_key_arn" {
   default     = null
 }
 
+variable "log_exports" {
+  description = "(Optional) The types of logs the namespace can export. Available export types are userlog, connectionlog, and useractivitylog."
+  type        = list(string)
+  default     = ["userlog", "connectionlog", "useractivitylog"]
+}
+
 variable "logging" {
   description = "Logging configuration for the cluster"
   type        = any
