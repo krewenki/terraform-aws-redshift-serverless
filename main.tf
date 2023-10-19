@@ -45,15 +45,6 @@ resource "aws_redshiftserverless_workgroup" "this" {
   tags                 = merge(var.tags, try(each.value.tags, {}))
 }
 
-resource "aws_redshiftserverless_usage_limit" "this" {
-  count         = var.create ? 1 : 0
-  resource_arn  = aws_redshiftserverless_workgroup.this.arn
-  usage_type    = "serverless-compute"
-  amount        = 60
-  period        = "daily"
-  breach_action = "deactivate"
-}
-
 resource "aws_redshiftserverless_endpoint_access" "this" {
   count                  = var.create && var.create_endpoint_access ? 1 : 0
   endpoint_name          = var.endpoint_name
@@ -96,3 +87,12 @@ resource "aws_redshift_subnet_group" "this" {
 
 #   tags = merge(var.tags, try(each.value.tags, {}))
 # }
+
+resource "aws_redshiftserverless_usage_limit" "this" {
+  count         = var.create ? 1 : 0
+  resource_arn  = aws_redshiftserverless_workgroup.this.arn
+  usage_type    = "serverless-compute"
+  amount        = 60
+  period        = "daily"
+  breach_action = "deactivate"
+}
