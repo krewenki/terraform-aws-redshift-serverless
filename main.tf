@@ -40,7 +40,7 @@ resource "aws_redshiftserverless_workgroup" "this" {
   base_capacity        = null
   enhanced_vpc_routing = var.enhanced_vpc_routing
   publicly_accessible  = var.publicly_accessible
-  security_group_ids   = null
+  security_group_ids   = var.vpc_security_group_ids
   subnet_ids           = var.subnet_ids
   tags                 = merge(var.tags, try(each.value.tags, {}))
 }
@@ -58,7 +58,7 @@ resource "aws_redshiftserverless_endpoint_access" "this" {
   count                  = var.create && var.create_endpoint_access ? 1 : 0
   endpoint_name          = var.endpoint_name
   workgroup_name         = aws_redshiftserverless_workgroup.this.workgroup_name
-  security_group_ids     = null
+  security_group_ids     = var.vpc_security_group_ids
   subnet_ids             = var.subnet_ids
   vpc_security_group_ids = var.endpoint_vpc_security_group_ids
 }
