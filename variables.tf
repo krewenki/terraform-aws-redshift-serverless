@@ -350,12 +350,6 @@ variable "use_snapshot_identifier_prefix" {
   default     = true
 }
 
-variable "snapshot_schedule_description" {
-  description = "The description of the snapshot schedule"
-  type        = string
-  default     = null
-}
-
 ################################################################################
 # Endpoint Access
 ################################################################################
