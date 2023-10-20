@@ -282,12 +282,6 @@ variable "parameter_group_family" {
   default     = "redshift-1.0"
 }
 
-variable "parameter_group_parameters" {
-  description = "value"
-  type        = map(any)
-  default     = {}
-}
-
 ################################################################################
 # Subnet Group
 ################################################################################
