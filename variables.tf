@@ -384,12 +384,6 @@ variable "create_scheduled_action_iam_role" {
   default     = false
 }
 
-variable "iam_role_name" {
-  description = "Name to use on scheduled action IAM role created"
-  type        = string
-  default     = null
-}
-
 ################################################################################
 # Endpoint Access
 ################################################################################
