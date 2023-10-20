@@ -190,12 +190,6 @@ variable "port" {
   default     = null
 }
 
-variable "preferred_maintenance_window" {
-  description = "The weekly time range (in UTC) during which automated cluster maintenance can occur. Format: `ddd:hh24:mi-ddd:hh24:mi`"
-  type        = string
-  default     = "sat:10:00-sat:10:30"
-}
-
 variable "publicly_accessible" {
   description = "If true, the cluster can be accessed from a public network"
   type        = bool
