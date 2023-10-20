@@ -362,12 +362,6 @@ variable "snapshot_schedule_definitions" {
   default     = []
 }
 
-variable "snapshot_schedule_force_destroy" {
-  description = "Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion"
-  type        = bool
-  default     = null
-}
-
 ################################################################################
 # Endpoint Access
 ################################################################################
