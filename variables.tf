@@ -166,12 +166,6 @@ variable "master_username" {
   default     = "awsuser"
 }
 
-variable "node_type" {
-  description = "The node type to be provisioned for the cluster"
-  type        = string
-  default     = ""
-}
-
 variable "publicly_accessible" {
   description = "If true, the cluster can be accessed from a public network"
   type        = bool
