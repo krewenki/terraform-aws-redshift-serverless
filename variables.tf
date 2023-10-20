@@ -83,14 +83,6 @@ variable "database_name" {
   default     = null
 }
 
-# default_iam_role_arn -> see iam roles section
-
-variable "elastic_ip" {
-  description = "The Elastic IP (EIP) address for the cluster"
-  type        = string
-  default     = null
-}
-
 variable "enhanced_vpc_routing" {
   description = "If `true`, enhanced VPC routing is enabled"
   type        = bool
