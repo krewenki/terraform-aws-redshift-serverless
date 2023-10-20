@@ -378,12 +378,6 @@ variable "scheduled_actions" {
   default     = {}
 }
 
-variable "create_scheduled_action_iam_role" {
-  description = "Determines whether a scheduled action IAM role is created"
-  type        = bool
-  default     = false
-}
-
 ################################################################################
 # Endpoint Access
 ################################################################################
