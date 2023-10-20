@@ -436,12 +436,6 @@ variable "endpoint_name" {
   default     = ""
 }
 
-variable "endpoint_resource_owner" {
-  description = "The Amazon Web Services account ID of the owner of the cluster. This is only required if the cluster is in another Amazon Web Services account"
-  type        = string
-  default     = null
-}
-
 variable "endpoint_vpc_security_group_ids" {
   description = "The security group IDs to use for the endpoint access (managed VPC endpoint)"
   type        = list(string)
