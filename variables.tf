@@ -264,12 +264,6 @@ variable "create_parameter_group" {
   default     = true
 }
 
-variable "parameter_group_name" {
-  description = "The name of the Redshift parameter group, existing or to be created"
-  type        = string
-  default     = null
-}
-
 ################################################################################
 # Subnet Group
 ################################################################################
