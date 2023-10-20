@@ -338,12 +338,6 @@ variable "create_snapshot_schedule" {
   default     = false
 }
 
-variable "snapshot_schedule_identifier" {
-  description = "The snapshot schedule identifier"
-  type        = string
-  default     = null
-}
-
 ################################################################################
 # Endpoint Access
 ################################################################################
