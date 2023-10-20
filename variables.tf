@@ -38,12 +38,6 @@ variable "apply_immediately" {
   default     = null
 }
 
-variable "aqua_configuration_status" {
-  description = "The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) after the cluster is restored. Possible values are `enabled`, `disabled`, and `auto`. Requires Cluster reboot"
-  type        = string
-  default     = null
-}
-
 variable "cluster_identifier" {
   description = "The Cluster Identifier. Must be a lower case string"
   type        = string
