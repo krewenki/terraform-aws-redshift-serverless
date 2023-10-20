@@ -50,12 +50,6 @@ variable "automated_snapshot_retention_period" {
   default     = null
 }
 
-variable "availability_zone" {
-  description = "The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. Can only be changed if `availability_zone_relocation_enabled` is `true`"
-  type        = string
-  default     = null
-}
-
 variable "cluster_identifier" {
   description = "The Cluster Identifier. Must be a lower case string"
   type        = string
