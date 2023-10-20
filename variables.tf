@@ -184,12 +184,6 @@ variable "owner_account" {
   default     = null
 }
 
-variable "port" {
-  description = "The port number on which the cluster accepts incoming connections. Default port is 5439"
-  type        = number
-  default     = null
-}
-
 variable "publicly_accessible" {
   description = "If true, the cluster can be accessed from a public network"
   type        = bool
