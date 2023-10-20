@@ -41,7 +41,7 @@ resource "aws_redshiftserverless_workgroup" "this" {
   publicly_accessible  = var.publicly_accessible
   security_group_ids   = var.vpc_security_group_ids
   subnet_ids           = var.subnet_ids
-  tags                 = merge(var.tags, try(each.value.tags, {}))
+  tags                 = var.tags
 }
 
 resource "aws_redshiftserverless_endpoint_access" "this" {
