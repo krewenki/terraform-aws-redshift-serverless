@@ -220,12 +220,6 @@ variable "snapshot_copy" {
   default     = {}
 }
 
-variable "snapshot_identifier" {
-  description = "The name of the snapshot from which to create the new cluster"
-  type        = string
-  default     = null
-}
-
 variable "vpc_security_group_ids" {
   description = "A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster"
   type        = list(string)
