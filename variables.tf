@@ -288,12 +288,6 @@ variable "parameter_group_parameters" {
   default     = {}
 }
 
-variable "parameter_group_tags" {
-  description = "Additional tags to add to the parameter group"
-  type        = map(string)
-  default     = {}
-}
-
 ################################################################################
 # Subnet Group
 ################################################################################
