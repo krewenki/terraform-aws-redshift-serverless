@@ -442,12 +442,6 @@ variable "endpoint_resource_owner" {
   default     = null
 }
 
-variable "endpoint_subnet_group_name" {
-  description = "The subnet group from which Amazon Redshift chooses the subnet to deploy the endpoint"
-  type        = string
-  default     = ""
-}
-
 variable "endpoint_vpc_security_group_ids" {
   description = "The security group IDs to use for the endpoint access (managed VPC endpoint)"
   type        = list(string)
