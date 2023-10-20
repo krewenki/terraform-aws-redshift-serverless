@@ -208,12 +208,6 @@ variable "skip_final_snapshot" {
   default     = true
 }
 
-variable "snapshot_cluster_identifier" {
-  description = "The name of the cluster the source snapshot was created from"
-  type        = string
-  default     = null
-}
-
 variable "vpc_security_group_ids" {
   description = "A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster"
   type        = list(string)
