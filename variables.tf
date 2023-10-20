@@ -270,12 +270,6 @@ variable "parameter_group_name" {
   default     = null
 }
 
-variable "parameter_group_description" {
-  description = "The description of the Redshift parameter group. Defaults to `Managed by Terraform`"
-  type        = string
-  default     = null
-}
-
 ################################################################################
 # Subnet Group
 ################################################################################
