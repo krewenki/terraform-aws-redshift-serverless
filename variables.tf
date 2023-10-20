@@ -14,6 +14,12 @@ variable "tags" {
 # Cluster
 ################################################################################
 
+variable "base_capacity" {
+  description = "(Optional) The base data warehouse capacity of the workgroup in Redshift Processing Units (RPUs)."
+  type        = number
+  default     = null
+}
+
 variable "namespace_name" {
   description = "(Required) The name of the namespace"
   type        = string

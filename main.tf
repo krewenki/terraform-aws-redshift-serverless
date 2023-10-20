@@ -37,7 +37,7 @@ resource "aws_redshiftserverless_workgroup" "this" {
   namespace_name = aws_redshiftserverless_namespace.this[0].namespace_name
   workgroup_name = aws_redshiftserverless_namespace.this[0].namespace_name
 
-  base_capacity        = null
+  base_capacity        = var.base_capacity
   enhanced_vpc_routing = var.enhanced_vpc_routing
   publicly_accessible  = var.publicly_accessible
   security_group_ids   = var.vpc_security_group_ids
