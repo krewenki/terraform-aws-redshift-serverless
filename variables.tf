@@ -255,16 +255,6 @@ variable "default_iam_role_arn" {
 }
 
 ################################################################################
-# Parameter Group
-################################################################################
-
-variable "create_parameter_group" {
-  description = "Determines whether to create a parameter group or use existing"
-  type        = bool
-  default     = true
-}
-
-################################################################################
 # Subnet Group
 ################################################################################
 
