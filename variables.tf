@@ -396,12 +396,6 @@ variable "iam_role_use_name_prefix" {
   default     = true
 }
 
-variable "iam_role_path" {
-  description = "Scheduled action IAM role path"
-  type        = string
-  default     = null
-}
-
 ################################################################################
 # Endpoint Access
 ################################################################################
