@@ -26,12 +26,6 @@ variable "namespace_name" {
   default     = null
 }
 
-variable "allow_version_upgrade" {
-  description = "If `true`, major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is `true`"
-  type        = bool
-  default     = null
-}
-
 variable "cluster_identifier" {
   description = "The Cluster Identifier. Must be a lower case string"
   type        = string
