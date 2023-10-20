@@ -414,12 +414,6 @@ variable "iam_role_permissions_boundary" {
   default     = null
 }
 
-variable "iam_role_tags" {
-  description = "A map of additional tags to add to the scheduled action IAM role created"
-  type        = map(string)
-  default     = {}
-}
-
 ################################################################################
 # Endpoint Access
 ################################################################################
