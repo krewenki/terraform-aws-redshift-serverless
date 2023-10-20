@@ -56,12 +56,6 @@ variable "availability_zone" {
   default     = null
 }
 
-variable "availability_zone_relocation_enabled" {
-  description = "If `true`, the cluster can be relocated to another availabity zone, either automatically by AWS or when requested. Default is `false`. Available for use on clusters from the RA3 instance family"
-  type        = bool
-  default     = null
-}
-
 variable "cluster_identifier" {
   description = "The Cluster Identifier. Must be a lower case string"
   type        = string
