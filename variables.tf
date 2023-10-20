@@ -469,13 +469,3 @@ variable "usage_limits" {
   }))
   default = []
 }
-
-################################################################################
-# Authentication Profile
-################################################################################
-
-variable "authentication_profiles" {
-  description = "Map of authentication profiles to create"
-  type        = any
-  default     = {}
-}
