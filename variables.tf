@@ -402,12 +402,6 @@ variable "iam_role_path" {
   default     = null
 }
 
-variable "iam_role_description" {
-  description = "Description of the scheduled action IAM role"
-  type        = string
-  default     = null
-}
-
 ################################################################################
 # Endpoint Access
 ################################################################################
