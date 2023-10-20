@@ -356,12 +356,6 @@ variable "snapshot_schedule_description" {
   default     = null
 }
 
-variable "snapshot_schedule_definitions" {
-  description = "The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`"
-  type        = list(string)
-  default     = []
-}
-
 ################################################################################
 # Endpoint Access
 ################################################################################
