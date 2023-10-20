@@ -232,12 +232,6 @@ variable "vpc_security_group_ids" {
   default     = []
 }
 
-variable "cluster_timeouts" {
-  description = "Create, update, and delete timeout configurations for the cluster"
-  type        = map(string)
-  default     = {}
-}
-
 ################################################################################
 # IAM Roles
 ################################################################################
