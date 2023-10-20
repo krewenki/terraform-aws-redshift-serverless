@@ -44,12 +44,6 @@ variable "aqua_configuration_status" {
   default     = null
 }
 
-variable "automated_snapshot_retention_period" {
-  description = "The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1"
-  type        = number
-  default     = null
-}
-
 variable "cluster_identifier" {
   description = "The Cluster Identifier. Must be a lower case string"
   type        = string
