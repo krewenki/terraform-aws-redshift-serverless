@@ -91,12 +91,6 @@ variable "elastic_ip" {
   default     = null
 }
 
-variable "encrypted" {
-  description = "If `true`, the data in the cluster is encrypted at rest"
-  type        = bool
-  default     = true
-}
-
 variable "enhanced_vpc_routing" {
   description = "If `true`, enhanced VPC routing is enabled"
   type        = bool
