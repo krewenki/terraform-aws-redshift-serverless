@@ -48,11 +48,22 @@ resource "aws_redshiftserverless_workgroup" "this" {
 # Access to Redshift
 ################################################################################
 
+resource "aws_security_group" "this" {
+  count  = var.create && var.create_default_security_group ? 1 : 0
+  name   = var.default_security_group_name
+  vpc_id = var.default_security_group_vpc_id
+  tags   = var.default_security_group_tags
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+
 resource "aws_redshiftserverless_endpoint_access" "this" {
   count                  = var.create && var.create_endpoint_access ? 1 : 0
   endpoint_name          = var.endpoint_name
   workgroup_name         = aws_redshiftserverless_workgroup.this.workgroup_name
-  security_group_ids     = var.vpc_security_group_ids
+  security_group_ids     = concat(var.vpc_security_group_ids, try([aws_security_group.this[0].id], []))
   subnet_ids             = var.subnet_ids
   vpc_security_group_ids = var.endpoint_vpc_security_group_ids
 }

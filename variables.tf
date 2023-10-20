@@ -92,6 +92,30 @@ variable "publicly_accessible" {
   default     = false
 }
 
+variable "create_default_security_group" {
+  description = "Whether to create a new Security Group dedicated to Serverless Redshift Endpoint"
+  type        = bool
+  default     = false
+}
+
+variable "default_security_group_name" {
+  description = "(Optional) The name to provide to the default security group, in case `create_default_security_group` is set to true"
+  type        = string
+  default     = null
+}
+
+variable "default_security_group_vpc_id" {
+  description = "(Optional) The VPC id to provide to the default security group, in case `create_default_security_group` is set to true"
+  type        = string
+  default     = null
+}
+
+variable "default_security_group_tags" {
+  description = "(Optional) Tags to provide to the default security group, in case `create_default_security_group` is set to true"
+  type        = object({})
+  default     = {}
+}
+
 variable "vpc_security_group_ids" {
   description = "A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster"
   type        = list(string)
