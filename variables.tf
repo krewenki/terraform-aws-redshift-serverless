@@ -202,12 +202,6 @@ variable "publicly_accessible" {
   default     = false
 }
 
-variable "skip_final_snapshot" {
-  description = "Determines whether a final snapshot of the cluster is created before Redshift deletes the cluster. If true, a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted"
-  type        = bool
-  default     = true
-}
-
 variable "vpc_security_group_ids" {
   description = "A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster"
   type        = list(string)
