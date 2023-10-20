@@ -276,12 +276,6 @@ variable "parameter_group_description" {
   default     = null
 }
 
-variable "parameter_group_family" {
-  description = "The family of the Redshift parameter group"
-  type        = string
-  default     = "redshift-1.0"
-}
-
 ################################################################################
 # Subnet Group
 ################################################################################
