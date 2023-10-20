@@ -453,9 +453,15 @@ variable "endpoint_vpc_security_group_ids" {
 ################################################################################
 
 variable "usage_limits" {
-  description = "Map of usage limit defintions to create"
-  type        = any
-  default     = {}
+  description = "Map of usage limit definitions to create; more info see: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/redshiftserverless_usage_limit"
+  type = list(object({
+    usage_type    = string,
+    amount        = number,
+    period        = string,
+    breach_action = string,
+    tags          = map(string),
+  }))
+  default = []
 }
 
 ################################################################################

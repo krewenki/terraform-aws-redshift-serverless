@@ -74,25 +74,12 @@ resource "aws_redshift_subnet_group" "this" {
 # Usage Limit
 ################################################################################
 
-# resource "aws_redshift_usage_limit" "this" {
-#   for_each = { for k, v in var.usage_limits : k => v if var.create }
-
-#   cluster_identifier = aws_redshift_cluster.this[0].id
-
-#   amount        = each.value.amount
-#   breach_action = try(each.value.breach_action, null)
-#   feature_type  = each.value.feature_type
-#   limit_type    = each.value.limit_type
-#   period        = try(each.value.period, null)
-
-#   tags = merge(var.tags, try(each.value.tags, {}))
-# }
-
 resource "aws_redshiftserverless_usage_limit" "this" {
-  count         = var.create ? 1 : 0
-  resource_arn  = aws_redshiftserverless_workgroup.this.arn
-  usage_type    = "serverless-compute"
-  amount        = 60
-  period        = "daily"
-  breach_action = "deactivate"
+  for_each      = var.create ? toset(var.usage_limits) : []
+  resource_arn  = aws_redshiftserverless_workgroup.this[0].arn
+  usage_type    = try(each.key.usage_type, null)
+  amount        = try(each.key.amount, null)
+  period        = try(each.key.period, null)
+  breach_action = try(each.key.breach_action, null)
+  tags          = try(each.key.tags, {})
 }
