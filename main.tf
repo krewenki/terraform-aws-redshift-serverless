@@ -23,7 +23,7 @@ resource "aws_redshiftserverless_namespace" "this" {
   count                = var.create ? 1 : 0
   namespace_name       = var.namespace_name
   admin_user_password  = local.master_password
-  admin_user           = var.master_username
+  admin_username       = var.master_username
   db_name              = var.database_name
   default_iam_role_arn = var.default_iam_role_arn
   iam_roles            = var.iam_role_arns
