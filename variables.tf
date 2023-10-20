@@ -172,12 +172,6 @@ variable "node_type" {
   default     = ""
 }
 
-variable "number_of_nodes" {
-  description = "Number of nodes in the cluster. Defaults to 1. Note: values greater than 1 will trigger `cluster_type` to switch to `multi-node`"
-  type        = number
-  default     = 1
-}
-
 variable "publicly_accessible" {
   description = "If true, the cluster can be accessed from a public network"
   type        = bool
