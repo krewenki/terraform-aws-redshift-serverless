@@ -214,12 +214,6 @@ variable "snapshot_cluster_identifier" {
   default     = null
 }
 
-variable "snapshot_copy" {
-  description = "Configuration of automatic copy of snapshots from one region to another"
-  type        = any
-  default     = {}
-}
-
 variable "vpc_security_group_ids" {
   description = "A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster"
   type        = list(string)
