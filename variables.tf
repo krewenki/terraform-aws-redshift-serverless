@@ -178,12 +178,6 @@ variable "number_of_nodes" {
   default     = 1
 }
 
-variable "owner_account" {
-  description = "The AWS customer account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own, optional if you own the snapshot"
-  type        = string
-  default     = null
-}
-
 variable "publicly_accessible" {
   description = "If true, the cluster can be accessed from a public network"
   type        = bool
