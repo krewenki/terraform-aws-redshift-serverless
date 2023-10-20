@@ -390,12 +390,6 @@ variable "iam_role_name" {
   default     = null
 }
 
-variable "iam_role_use_name_prefix" {
-  description = "Determines whether scheduled action the IAM role name (`iam_role_name`) is used as a prefix"
-  type        = string
-  default     = true
-}
-
 ################################################################################
 # Endpoint Access
 ################################################################################
