@@ -32,12 +32,6 @@ variable "allow_version_upgrade" {
   default     = null
 }
 
-variable "apply_immediately" {
-  description = "Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`"
-  type        = bool
-  default     = null
-}
-
 variable "cluster_identifier" {
   description = "The Cluster Identifier. Must be a lower case string"
   type        = string
