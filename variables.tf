@@ -408,12 +408,6 @@ variable "iam_role_description" {
   default     = null
 }
 
-variable "iam_role_permissions_boundary" {
-  description = "ARN of the policy that is used to set the permissions boundary for the scheduled action IAM role"
-  type        = string
-  default     = null
-}
-
 ################################################################################
 # Endpoint Access
 ################################################################################
