@@ -135,12 +135,6 @@ variable "maintenance_track_name" {
   default     = null
 }
 
-variable "manual_snapshot_retention_period" {
-  description = "The default number of days to retain a manual snapshot. If the value is -1, the snapshot is retained indefinitely. This setting doesn't change the retention period of existing snapshots. Valid values are between `-1` and `3653`. Default value is `-1`"
-  type        = number
-  default     = null
-}
-
 variable "master_password" {
   description = "Password for the master DB user. (Required unless a `snapshot_identifier` is provided). Must contain at least 8 chars, one uppercase letter, one lowercase letter, and one number"
   type        = string
