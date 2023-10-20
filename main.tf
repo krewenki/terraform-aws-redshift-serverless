@@ -29,7 +29,7 @@ resource "aws_redshiftserverless_namespace" "this" {
   iam_roles            = var.iam_role_arns
   kms_key_id           = var.kms_key_arn
   log_exports          = var.log_exports
-  tags                 = merge(var.tags, try(each.value.tags, {}))
+  tags                 = var.tags
 }
 
 resource "aws_redshiftserverless_workgroup" "this" {
