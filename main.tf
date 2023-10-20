@@ -44,6 +44,10 @@ resource "aws_redshiftserverless_workgroup" "this" {
   tags                 = var.tags
 }
 
+################################################################################
+# Access to Redshift
+################################################################################
+
 resource "aws_redshiftserverless_endpoint_access" "this" {
   count                  = var.create && var.create_endpoint_access ? 1 : 0
   endpoint_name          = var.endpoint_name
