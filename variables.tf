@@ -344,12 +344,6 @@ variable "snapshot_schedule_identifier" {
   default     = null
 }
 
-variable "use_snapshot_identifier_prefix" {
-  description = "Determines whether the identifier (`snapshot_schedule_identifier`) is used as a prefix"
-  type        = bool
-  default     = true
-}
-
 ################################################################################
 # Endpoint Access
 ################################################################################
