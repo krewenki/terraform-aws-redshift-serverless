@@ -71,12 +71,6 @@ variable "cluster_identifier" {
 # cluster_parameter_group_name -> see parameter group section
 # cluster_subnet_group_name -> see subnet group section
 
-variable "cluster_version" {
-  description = "The version of the Amazon Redshift engine software that you want to deploy on the cluster. The version selected runs on all the nodes in the cluster"
-  type        = string
-  default     = null
-}
-
 variable "database_name" {
   description = "The name of the first database to be created when the cluster is created. If you do not provide a name, Amazon Redshift will create a default database called `dev`"
   type        = string
