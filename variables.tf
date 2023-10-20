@@ -129,12 +129,6 @@ variable "logging" {
   default     = {}
 }
 
-variable "maintenance_track_name" {
-  description = "The name of the maintenance track for the restored cluster. When you take a snapshot, the snapshot inherits the MaintenanceTrack value from the cluster. The snapshot might be on a different track than the cluster that was the source for the snapshot. Default value is `current`"
-  type        = string
-  default     = null
-}
-
 variable "master_password" {
   description = "Password for the master DB user. (Required unless a `snapshot_identifier` is provided). Must contain at least 8 chars, one uppercase letter, one lowercase letter, and one number"
   type        = string
