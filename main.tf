@@ -89,10 +89,10 @@ resource "aws_redshift_subnet_group" "this" {
 ################################################################################
 
 resource "aws_redshiftserverless_usage_limit" "this" {
-  for_each      = var.create ? toset(var.usage_limits) : []
+  for_each      = var.create ? toset([for limit in var.usage_limits : limit.usage_type]) : []
   resource_arn  = aws_redshiftserverless_workgroup.this[0].arn
-  usage_type    = try(each.key.usage_type, null)
-  amount        = try(each.key.amount, null)
-  period        = try(each.key.period, null)
-  breach_action = try(each.key.breach_action, null)
+  usage_type    = each.key
+  amount        = var.usage_limits[each.key].amount
+  period        = var.usage_limits[each.key].period
+  breach_action = var.usage_limits[each.key].breach_action
 }
