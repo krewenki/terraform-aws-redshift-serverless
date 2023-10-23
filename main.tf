@@ -95,5 +95,4 @@ resource "aws_redshiftserverless_usage_limit" "this" {
   amount        = try(each.key.amount, null)
   period        = try(each.key.period, null)
   breach_action = try(each.key.breach_action, null)
-  tags          = try(each.key.tags, {})
 }

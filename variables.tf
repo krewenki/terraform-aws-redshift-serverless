@@ -205,7 +205,6 @@ variable "usage_limits" {
     amount        = number,
     period        = string,
     breach_action = string,
-    tags          = map(string),
   }))
   default = []
 }
